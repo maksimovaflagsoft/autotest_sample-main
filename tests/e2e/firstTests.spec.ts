@@ -18,6 +18,12 @@ test.describe.parallel('Базовая проверка сайта', () => {
             await expect(ui).toHaveCount(2)
 
         })
+
+        test('Проверка 113', async ({page})=> {
+            await page.goto('https://magento.softwaretestingboard.com/')
+            await page.click('#ui-id-4')
+
+        })
             
     })
 
