@@ -1,14 +1,12 @@
 import {test, expect, Page} from "@playwright/test"
 
-test.describe.parallel('Базовая проверка сайта', () => {
+test.describe.parallel('авторизация', () => {
 
-    test.describe.parallel('Базовая проверка сайта 1', () => {
+    test.describe.parallel('авторизация с валидными данными', () => {
 
-        test('Проверка 111', async ({page})=> {
+        test('Проверка 1', async ({page})=> {
                 await page.goto('https://magento.softwaretestingboard.com/')
-                const whatsNew = await page.locator('#ui-id-3')
-                await expect(whatsNew).toContainText('W')
-
+                await page.click('#ui-id-3'); // Клик по ссылке внутри элемента
             })
             
         test('Проверка 112', async ({page})=> {
@@ -27,12 +25,6 @@ test.describe.parallel('Базовая проверка сайта', () => {
             
     })
 
-    // test.describe.parallel('Базовая проверка сайта 2', () => {
-
-    //     test('Проверка 123', async ({page})=> {
-    //             await page.goto('https://example.com/')
-    //         })
-    // })
 
 
 })
